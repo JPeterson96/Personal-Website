@@ -1,0 +1,12 @@
+.backgroundContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.backgroundHeader {
+    float: left;
+    display: flex;
+    padding: 2%;
+}

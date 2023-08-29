@@ -3,6 +3,7 @@ import './homePage.css';
 import Button from '@mui/material/Button';
 import LanguageHive from '../languageHive/languageHive';
 import Background from '../background/background';
+import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 
 const HomePage = () => {
   const [displayComponent, setDisplayComponent] = useState(null);
@@ -33,14 +34,14 @@ const HomePage = () => {
                   />
                   <div className="text-overlay">
                     <h1>James "Jamie" Peterson</h1>
-                    <div style={{fontFamily:"cursive"}}>
+                    <div style={{fontFamily:''}}>
                       <p>From the rocky mountains to the great lakes</p>
                       <p>Here is my journey!</p>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="tableOfContentsContainer">
+              {/* <div className="tableOfContentsContainer">
                 <img
                     src="/pictures/WinterParkResort.jpeg"
                     alt="Mountain range"
@@ -62,7 +63,7 @@ const HomePage = () => {
                         <Button onClick={() => handlePageChange("contact me")}>Contact Me</Button>
                     </ul>
                 </div>
-            </div>
+            </div> */}
               <div className="languageHive-container">
                 <LanguageHive />
               </div>
@@ -75,7 +76,7 @@ const HomePage = () => {
 
   useEffect(() => { 
       initialize();
-  }, []);
+  });
 
   const handlePageChange = (page) => {
       if (page === "background") {
@@ -106,10 +107,33 @@ const HomePage = () => {
           // setDisplayComponent(<ContactMe />);
           // setCurrentComponent(<ContactMe />);
       }
+
+      if (page === "home") {
+          setDisplayComponent(null);
+          setCurrentComponent(null);
+      }
+  }
+
+  const pageHeader = () => {
+    return (
+      <div className="headerContainer">
+        <div className="headerHome">
+          <HomeOutlinedIcon fontSize='large' onClick={() => handlePageChange("home")} style={{ cursor: "pointer" }} />
+        </div>
+        <div className="headerButtons">
+          <Button onClick={() => handlePageChange("background")}>Background</Button>
+          <Button style={{marginLeft:"2%"}} onClick={() => handlePageChange("experience")}>Experience</Button>
+          <Button style={{marginLeft:"2%"}} onClick={() => handlePageChange("projects")}>Projects</Button>
+          <Button style={{marginLeft:"2%"}} onClick={() => handlePageChange("socials")}>Socials</Button>
+          <Button style={{marginLeft:"2%", marginRight:"2%"}} onClick={() => handlePageChange("contact me")}>Contact Me</Button>
+        </div>
+      </div>
+    );
   }
 
   return (
     <>
+      {pageHeader()}
       {displayComponent}
     </>
   );

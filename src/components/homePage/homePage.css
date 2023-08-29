@@ -1,8 +1,9 @@
 .homepage-container {
-  display: flex;
-  height: 100vh; /* Set the height of the container to the full viewport height */
-  overflow: hidden; /* Hide any overflow beyond the viewport */
+  display: inline-flex;
+  height: 90vh;
+  overflow: hidden;
   margin: 0px;
+  width: 100vw;
 }
 
 .left-panel {
@@ -55,10 +56,10 @@ p {
   justify-content: center;
   align-items: center;
   background-color: rgba(255, 255, 255, 0.9);
-  height: 100vh; /* Set the height of the container to the full viewport height */
+  height: 100vh;
   overflow: hidden;
-  padding-left: 2%;
-  padding-right: 2%;
+  padding-left: 3%;
+  padding-right: 3%;
 }
 
 .backgroundImage {
@@ -68,4 +69,20 @@ p {
   object-fit: cover;
   opacity: 0.9;
   z-index: -2;
+}
+
+.headerContainer {
+  display: inline-block;
+  flex-wrap: nowrap;
+  height: 10vh;
+}
+
+.headerHome {
+  float: left;
+}
+
+.headerButtons {
+  flex-wrap: nowrap;
+  width: 100vw;
+  text-align: right;
 }
