@@ -1,7 +1,6 @@
 import {React, useState, useEffect} from 'react';
 import './homePage.css';
 import Button from '@mui/material/Button';
-import LanguageHive from '../languageHive/languageHive';
 import Background from '../background/background';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 
@@ -34,39 +33,16 @@ const HomePage = () => {
                   />
                   <div className="text-overlay">
                     <h1>James "Jamie" Peterson</h1>
-                    <div style={{fontFamily:''}}>
+                    <div>
                       <p>From the rocky mountains to the great lakes</p>
                       <p>Here is my journey!</p>
                     </div>
                   </div>
                 </div>
               </div>
-              {/* <div className="tableOfContentsContainer">
-                <img
-                    src="/pictures/WinterParkResort.jpeg"
-                    alt="Mountain range"
-                    className="backgroundImage"
-                />
-                <h1>My Story</h1>
-                <p>
-                    I grew up in a small mountain town in Colorado. After graduation I took a couple years off to work and gain an appreciation
-                    for the value of a college education. After 3 years of working in customer service I decided to go back to school.
-
-                </p>
-                <h1>Table of Contents</h1>
-                <div style={{display:"flex", flexDirection: "column", justifyContent: "center", alignItems: "center"}}>
-                    <ul>
-                        <Button onClick={() => handlePageChange("background")}>Background</Button>
-                        <Button onClick={() => handlePageChange("experience")}>Experience</Button>
-                        <Button onClick={() => handlePageChange("projects")}>Projects</Button>
-                        <Button onClick={() => handlePageChange("socials")}>Socials</Button>
-                        <Button onClick={() => handlePageChange("contact me")}>Contact Me</Button>
-                    </ul>
-                </div>
-            </div> */}
-              <div className="languageHive-container">
+              {/* <div className="languageHive-container">
                 <LanguageHive />
-              </div>
+              </div> */}
             </div>
           )
       }
@@ -118,14 +94,14 @@ const HomePage = () => {
     return (
       <div className="headerContainer">
         <div className="headerHome">
-          <HomeOutlinedIcon fontSize='large' onClick={() => handlePageChange("home")} style={{ cursor: "pointer" }} />
+          <HomeOutlinedIcon fontSize='large' onClick={() => handlePageChange("home")} style={{cursor: "pointer", marginTop:"1.5%"}} />
         </div>
         <div className="headerButtons">
-          <Button onClick={() => handlePageChange("background")}>Background</Button>
-          <Button style={{marginLeft:"2%"}} onClick={() => handlePageChange("experience")}>Experience</Button>
-          <Button style={{marginLeft:"2%"}} onClick={() => handlePageChange("projects")}>Projects</Button>
-          <Button style={{marginLeft:"2%"}} onClick={() => handlePageChange("socials")}>Socials</Button>
-          <Button style={{marginLeft:"2%", marginRight:"2%"}} onClick={() => handlePageChange("contact me")}>Contact Me</Button>
+          <Button sx={{fontSize:"large"}} style={{color:"white"}} onClick={() => handlePageChange("background")}>Background</Button>
+          <Button sx={{fontSize:"large"}} style={{marginLeft:"2%", color:"white"}} onClick={() => handlePageChange("experience")}>Experience</Button>
+          <Button sx={{fontSize:"large"}} style={{marginLeft:"2%", color:"white"}} onClick={() => handlePageChange("projects")}>Projects</Button>
+          <Button sx={{fontSize:"large"}} style={{marginLeft:"2%", color:"white"}} onClick={() => handlePageChange("socials")}>Socials</Button>
+          <Button sx={{fontSize:"large"}} style={{marginLeft:"2%", marginRight:"2%", color:"white"}} onClick={() => handlePageChange("contact me")}>Contact Me</Button>
         </div>
       </div>
     );

@@ -1,6 +1,6 @@
 .homepage-container {
   display: inline-flex;
-  height: 90vh;
+  height: 100%;
   overflow: hidden;
   margin: 0px;
   width: 100vw;
@@ -48,6 +48,7 @@ h1 {
 
 p {
   font-size: 1.5rem;
+  /* font-family: ; */
 }
   
 .tableOfContentsContainer {
@@ -74,11 +75,19 @@ p {
 .headerContainer {
   display: inline-block;
   flex-wrap: nowrap;
-  height: 10vh;
+  background-color: black;
+  padding: 1%;
+  max-height: 6vh;
+  min-height: 6vh;
+  justify-content: center;
+  text-align: center;
+  flex-direction: row;
+  vertical-align: middle;
 }
 
 .headerHome {
   float: left;
+  color: white;
 }
 
 .headerButtons {
