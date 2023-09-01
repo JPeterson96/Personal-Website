@@ -4,6 +4,8 @@ import Button from '@mui/material/Button';
 import Background from '../background/background';
 import Experience from '../Experience/experience';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
 
 const HomePage = () => {
   const [displayComponent, setDisplayComponent] = useState(null);
@@ -84,13 +86,15 @@ const HomePage = () => {
     return (
       <div className="headerContainer">
         <div className="headerHome">
-          <HomeOutlinedIcon fontSize='large' onClick={() => handlePageChange("home")} style={{cursor: "pointer", marginTop:"1.5%"}} />
+          <HomeOutlinedIcon fontSize='large' onClick={() => handlePageChange("home")} style={{cursor: "pointer"}} />
         </div>
         <div className="headerButtons">
           <Button sx={{fontSize:"large"}} style={{color:"white"}} onClick={() => handlePageChange("background")}>Background</Button>
           <Button sx={{fontSize:"large"}} style={{marginLeft:"2%", color:"white"}} onClick={() => handlePageChange("experience")}>Experience</Button>
           <Button sx={{fontSize:"large"}} style={{marginLeft:"2%", color:"white"}} onClick={() => handlePageChange("projects")}>Projects</Button>
-          <Button sx={{fontSize:"large"}} style={{marginLeft:"2%", marginRight:"2%", color:"white"}} onClick={() => handlePageChange("contact me")}>Contact Me</Button>
+          <Button sx={{fontSize:"large"}} style={{marginLeft:"2%", color:"white"}} onClick={() => handlePageChange("contact me")}>Contact Me</Button>
+          <LinkedInIcon fontSize='large' style={{cursor:"pointer", marginLeft:"2%", color:"white"}} onClick={() => window.open("https://www.linkedin.com/in/james-peterson-35b8251a2/", "_blank")} />
+          <GitHubIcon fontSize='large' style={{cursor:"pointer", marginLeft:"2%", color:"white", marginRight:"2%"}} onClick={() => window.open("https://github.com/JPeterson96", "_blank")} />
         </div>
       </div>
     );

@@ -74,26 +74,29 @@ p {
 }
 
 .headerContainer {
-  display: inline-block;
-  flex-wrap: nowrap;
+  display: flex;
+  position: fixed;
+  flex-direction: row;
   background-color: black;
   padding: 1%;
   max-height: 6vh;
   min-height: 6vh;
-  justify-content: center;
-  text-align: center;
-  flex-direction: row;
-  position: fixed;
   z-index: 99;
+  align-items: center;
 }
 
 .headerHome {
-  float: left;
+  display: inline-flex;
   color: white;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .headerButtons {
+  display: inline-flex;
   flex-wrap: nowrap;
   width: 100vw;
-  text-align: right;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 3%;
 }
