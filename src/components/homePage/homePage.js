@@ -2,13 +2,13 @@ import {React, useState, useEffect} from 'react';
 import './homePage.css';
 import Button from '@mui/material/Button';
 import Background from '../background/background';
+import Experience from '../Experience/experience';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 
 const HomePage = () => {
   const [displayComponent, setDisplayComponent] = useState(null);
   const [currentComponent, setCurrentComponent] = useState(null);
 
-  // TODO move this logic to a new file that contains the different parts for homepage to call
   const initialize = () => { 
       let display;
 
@@ -40,9 +40,6 @@ const HomePage = () => {
                   </div>
                 </div>
               </div>
-              {/* <div className="languageHive-container">
-                <LanguageHive />
-              </div> */}
             </div>
           )
       }
@@ -61,21 +58,14 @@ const HomePage = () => {
       }
 
       if (page === "experience") {
-          // TODO
-          // setDisplayComponent(<Experience />);
-          // setCurrentComponent(<Experience />);
+          setDisplayComponent(<Experience />);
+          setCurrentComponent(<Experience />);
       }
 
       if (page === "projects") {
           // TODO
           // setDisplayComponent(<Projects />);
           // setCurrentComponent(<Projects />);
-      }
-
-      if (page === "socials") {
-          // TODO
-          // setDisplayComponent(<Socials />);
-          // setCurrentComponent(<Socials />);
       }
 
       if (page === "contact me") {
@@ -100,7 +90,6 @@ const HomePage = () => {
           <Button sx={{fontSize:"large"}} style={{color:"white"}} onClick={() => handlePageChange("background")}>Background</Button>
           <Button sx={{fontSize:"large"}} style={{marginLeft:"2%", color:"white"}} onClick={() => handlePageChange("experience")}>Experience</Button>
           <Button sx={{fontSize:"large"}} style={{marginLeft:"2%", color:"white"}} onClick={() => handlePageChange("projects")}>Projects</Button>
-          <Button sx={{fontSize:"large"}} style={{marginLeft:"2%", color:"white"}} onClick={() => handlePageChange("socials")}>Socials</Button>
           <Button sx={{fontSize:"large"}} style={{marginLeft:"2%", marginRight:"2%", color:"white"}} onClick={() => handlePageChange("contact me")}>Contact Me</Button>
         </div>
       </div>
@@ -108,10 +97,10 @@ const HomePage = () => {
   }
 
   return (
-    <>
+    <div>
       {pageHeader()}
       {displayComponent}
-    </>
+    </div>
   );
 };
 

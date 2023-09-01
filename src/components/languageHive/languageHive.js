@@ -13,15 +13,15 @@ import MySQLIcon from '@mui/icons-material/Storage';
 
 // TODO: find a different way to display icons
 const languages = [
-  { name: 'JavaScript', icon: <JavaScriptIcon /> },
-  { name: 'React', icon: <ReactIcon /> },
+  // { name: 'JavaScript', icon: <JavaScriptIcon /> },
+  // { name: 'React', icon: <ReactIcon /> },
   // { name: 'Python', icon: <PythonIcon /> },
-  { name: 'Java', icon: <JavaIcon /> },
-  { name: 'HTML', icon: <HTMLIcon /> },
-  { name: 'CSS', icon: <CSSIcon /> },
-  { name: 'C++', icon: <CPlusPlusIcon /> },
-  { name: 'C', icon: <CIcon /> },
-  { name: 'mySQL', icon: <MySQLIcon /> },
+  // { name: 'Java', icon: <JavaIcon /> },
+  // { name: 'HTML', icon: <HTMLIcon /> },
+  // { name: 'CSS', icon: <CSSIcon /> },
+  // { name: 'C++', icon: <CPlusPlusIcon /> },
+  // { name: 'C', icon: <CIcon /> },
+  // { name: 'mySQL', icon: <MySQLIcon /> },
 ];
 
 function LanguageHive() {
