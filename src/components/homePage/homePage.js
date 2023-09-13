@@ -3,6 +3,7 @@ import './homePage.css';
 import Button from '@mui/material/Button';
 import Background from '../background/background';
 import Experience from '../Experience/experience';
+import ContactMe from '../Contact/contact';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
@@ -36,7 +37,7 @@ const HomePage = () => {
                   <div className="text-overlay">
                     <h1>James "Jamie" Peterson</h1>
                     <div>
-                      <p>From the rocky mountains to the great lakes</p>
+                      <p>From the Rocky Mountains to the Great Lakes</p>
                       <p>Here is my journey!</p>
                     </div>
                   </div>
@@ -71,9 +72,8 @@ const HomePage = () => {
       }
 
       if (page === "contact me") {
-          // TODO
-          // setDisplayComponent(<ContactMe />);
-          // setCurrentComponent(<ContactMe />);
+          setDisplayComponent(<ContactMe />);
+          setCurrentComponent(<ContactMe />);
       }
 
       if (page === "home") {
