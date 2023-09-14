@@ -1,13 +1,11 @@
 import React from 'react';
 
 const Contact = () => {
-  // Define your email address
   const emailAddress = 'JamesPetersonTech@gmail.com';
 
-  // Function to open the user's default email app
   const handleEmailButtonClick = () => {
     window.location.href = `mailto:${emailAddress}`;
-  };
+  }
 
   return (
     <div className="contactContainer">

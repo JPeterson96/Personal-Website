@@ -7,6 +7,7 @@ import ContactMe from '../Contact/contact';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import EmailIcon from '@mui/icons-material/Email';
 
 const HomePage = () => {
   const [displayComponent, setDisplayComponent] = useState(null);
@@ -46,8 +47,8 @@ const HomePage = () => {
             </div>
           )
       }
-      setDisplayComponent(display);
-      setCurrentComponent(display);
+    setDisplayComponent(display);
+    setCurrentComponent(display);
   }
 
   useEffect(() => { 
@@ -65,11 +66,11 @@ const HomePage = () => {
           setCurrentComponent(<Experience />);
       }
 
-      if (page === "projects") {
-          // TODO
-          // setDisplayComponent(<Projects />);
-          // setCurrentComponent(<Projects />);
-      }
+      // if (page === "projects") {
+      //     // TODO
+      //     // setDisplayComponent(<Projects />);
+      //     // setCurrentComponent(<Projects />);
+      // }
 
       if (page === "contact me") {
           setDisplayComponent(<ContactMe />);
@@ -82,6 +83,12 @@ const HomePage = () => {
       }
   }
 
+  const handleEmailButtonClick = () => {
+    const emailAddress = 'JamesPetersonTech@gmail.com';
+    const emailLink = `mailto:${emailAddress}`;
+    window.open(emailLink, '_blank');
+  }
+
   const pageHeader = () => {
     return (
       <div className="headerContainer">
@@ -91,9 +98,10 @@ const HomePage = () => {
         <div className="headerButtons">
           <Button sx={{fontSize:"large"}} style={{color:"white"}} onClick={() => handlePageChange("background")}>Background</Button>
           <Button sx={{fontSize:"large"}} style={{marginLeft:"2%", color:"white"}} onClick={() => handlePageChange("experience")}>Experience</Button>
-          <Button sx={{fontSize:"large"}} style={{marginLeft:"2%", color:"white"}} onClick={() => handlePageChange("projects")}>Projects</Button>
+          {/* <Button sx={{fontSize:"large"}} style={{marginLeft:"2%", color:"white"}} onClick={() => handlePageChange("projects")}>Projects</Button> */}
           <Button sx={{fontSize:"large"}} style={{marginLeft:"2%", color:"white"}} onClick={() => handlePageChange("contact me")}>Contact Me</Button>
-          <LinkedInIcon fontSize='large' style={{cursor:"pointer", marginLeft:"2%", color:"white"}} onClick={() => window.open("https://www.linkedin.com/in/james-peterson-35b8251a2/", "_blank")} />
+          <EmailIcon fontSize='large' style={{cursor:"pointer", marginLeft:"2%", color:"white"}} onClick={() => handleEmailButtonClick()} />
+          <LinkedInIcon fontSize='large' style={{cursor:"pointer", marginLeft:"2%", color:"white"}} onClick={() => window.open("https://www.linkedin.com/in/james-peterson-35b8251a2/", "_blank")}/>
           <GitHubIcon fontSize='large' style={{cursor:"pointer", marginLeft:"2%", color:"white", marginRight:"2%"}} onClick={() => window.open("https://github.com/JPeterson96", "_blank")} />
         </div>
       </div>
