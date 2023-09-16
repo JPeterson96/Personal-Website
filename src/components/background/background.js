@@ -14,7 +14,7 @@ const Background = () => {
                     />
                     <div className="introPanel">
                         <div className="introTextOverlay">
-                            <h1>My Journey!</h1>
+                            <h1>My Journey</h1>
                             <div>
                                 <p>
                                 Growing up in the mountains I have always had a sense for adventure and a love for the unknown. 
