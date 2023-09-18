@@ -23,21 +23,18 @@ const ContactMe = () => {
             onClick={() => window.open("https://www.linkedin.com/in/james-peterson-35b8251a2/", "_blank")}
           />
             <Button className="buttonStyling" onClick={() => window.open("https://www.linkedin.com/in/james-peterson-35b8251a2/", "_blank")}>LinkedIn</Button>
-            {/* <p>LinkedIn</p> */}
           <GitHubIcon 
             fontSize='large' 
             style={{cursor:"pointer", marginLeft:"2%", marginRight:".5%"}} 
             onClick={() => window.open("https://github.com/JPeterson96", "_blank")}
           />
             <Button className="buttonStyling" onClick={() => window.open("https://github.com/JPeterson96", "_blank")}>Github</Button>
-            {/* <p>GitHub</p> */}
           <EmailIcon 
             fontSize='large' 
             style={{cursor:"pointer", marginLeft:"2%", marginRight:".1%"}} 
             onClick={() => handleEmailButtonClick()}
           />
             <Button className="buttonStyling" onClick={() => handleEmailButtonClick()}>Email</Button>
-            {/* <p>Email</p> */}
         </div>
       </div>
     </div>
