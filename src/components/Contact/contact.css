@@ -1,7 +1,61 @@
 .contactContainer {
+    background-image: url('/public/pictures/winterPark.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: fixed;
     height: 100vh;
-}
+    width: 100vw;
+    padding: 20px;
+  }  
+
+  .contactCard {
+    position: fixed;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(-50%);
+    background-color: lightgray;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    padding: 10px 20px;
+    border-radius: 20px;
+    padding-bottom: 10px;
+    opacity: 0.9;
+    top: 40%;
+    left: 50%;
+    font-size: x-large;
+  }
+
+  .contactCard h1 {
+    text-align: center;
+    padding: 20px;
+  }
+
+  .iconStyling {
+    cursor:"pointer";
+    margin-Left:"2%";
+    margin-Right:".5%";
+  }
+
+  .contactButtons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+  }
+  
+  .contactButtons .MuiSvgIcon-root {
+    cursor: pointer;
+    margin-left: 2%;
+    margin-right: 0.7%;
+  }
+  
+  .contactButtons .buttonStyling {
+    margin-left: 2%;
+    margin-right: 0.1%;
+  }
