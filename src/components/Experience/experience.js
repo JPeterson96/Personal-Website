@@ -27,7 +27,7 @@ function Experience() {
       <div className="pdfDocument">
         <iframe
           title="PDF Resume"
-          src="Résumé.pdf"
+          src="/Résumé.pdf"
           width={`${zoom}%`}
           height={`${zoom}%`}
         ></iframe>

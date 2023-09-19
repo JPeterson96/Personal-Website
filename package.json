@@ -1,5 +1,6 @@
 {
   "name": "personal_website",
+  "homepage": "http://jamiepeterson.tech",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
