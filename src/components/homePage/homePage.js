@@ -24,7 +24,7 @@ const HomePage = () => {
               <div className="homepage-container">
                 <div className="left-panel">
                   <img
-                    src="/pictures/Profile_Pic_Linkedin.jpg"
+                    src="/pictures/Headshot.jpeg"
                     alt="Headshot"
                     className="main-image"
                   />
